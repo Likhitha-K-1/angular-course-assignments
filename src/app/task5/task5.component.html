@@ -1,0 +1,8 @@
+<div class="zippy">
+    <div class="heading" [class.bg]="clicked" (click)="onClick()">
+        {{heading}}
+    </div>
+    <div class="body" *ngIf="clicked">
+        <ng-content></ng-content>
+    </div>
+</div>

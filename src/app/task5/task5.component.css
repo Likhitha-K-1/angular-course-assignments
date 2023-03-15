@@ -1,0 +1,20 @@
+.zippy{
+    border: 2px solid gray;
+    /* padding: 30px; */
+    border-radius: 10px;
+    /* margin-bottom: 30px; */
+
+}
+.heading{
+    padding: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.body{
+    padding: 30px;
+}
+
+.bg{
+    border-radius: 10px;
+    background-color: gainsboro;
+}

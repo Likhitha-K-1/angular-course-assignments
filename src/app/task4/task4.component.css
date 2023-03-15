@@ -1,0 +1,10 @@
+img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+span{
+    padding: 20px;
+    font-size: 20px;
+}

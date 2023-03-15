@@ -1,0 +1,28 @@
+<br><h2>Task 6</h2><br>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <label for="courseName">Course Name</label><br>
+    <input required minlength="5" ngModel type="text" class="inp" name="courseName" #courseName="ngModel" (change)="log(courseName)"><br>
+    <div class="alert alert-danger" *ngIf="courseName.touched && !courseName.valid">
+        <div *ngIf="courseName.errors['required']">
+            This field is required
+        </div>
+        <div *ngIf="courseName.errors['minlength']">
+            This field requires a minimum of {{courseName.errors['minlength'].requiredLength}} characters.
+        </div>
+        <!-- This field is required and needs min 5 characters. -->
+    </div>
+    <label for="category">Category</label><br>
+    <select ngModel required #select="ngModel" (change)="log(m)" name="category" id="category" class="inp">
+        <option value=""></option>
+        <option value="development">development</option>
+        <option value="art">Art</option>
+        <option value="languages">Languages</option>
+    </select><br>
+    <div class="alert alert-danger" *ngIf="select.touched && !select.valid">
+        Category is required
+    </div>
+    <input ngModel #m="ngModel" name="checkBox" type="checkbox"><label for="checkBox">30-day money-back guarantee</label><br>
+    <p>{{f.value | json}}</p>
+    <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+</form>
